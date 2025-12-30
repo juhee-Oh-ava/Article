@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 목록</title>
+</head>
+<body>
+
+<h1>게시판 목록</h1>
+{{#msg}}
+    <div style="margin-bottom: 15px; color: green; font-weight: bold;">
+        {{msg}}
+    </div>
+{{/msg}}
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>제목</th>
+    </tr>
+
+    {{#articleList}}
+        <tr>
+            <td>{{id}}</td>
+            <td>
+                <a href="/articles/{{id}}">
+                    {{title}}
+                </a>
+            </td>
+        </tr>
+    {{/articleList}}
+
+    {{^articleList}}
+        <tr>
+            <td colspan="3">게시글이 없습니다.</td>
+        </tr>
+    {{/articleList}}
+
+</table>
+
+<br>
+
+<a href="/articles/new">글 작성</a>
+
+</body>
+</html>

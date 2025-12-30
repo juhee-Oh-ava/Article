@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 수정</title>
+</head>
+<body>
+
+<h1>게시글 수정</h1>
+
+<form action="/articles/update" method="post">
+    <input name="id" type="hidden" value="{{id}}">
+    <table>
+        <tr>
+            <th>제목</th>
+            <td>
+                <input type="text" name="title" value="{{article.title}}" required>
+            </td>
+        </tr>
+        <tr>
+            <th>내용</th>
+            <td>
+                <textarea name="content" rows="10" required>{{article.content}}</textarea>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+
+    <button type="submit">수정 완료</button>
+<!--    <a href="/articles" type="submit">수수수정 완료</a>-->
+    <a href="/articles/{{article.id}}">취소</a>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시글 상세</title>
+</head>
+<body>
+
+<h1>게시글 상세</h1>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <td>{{article.id}}</td>
+    </tr>
+    <tr>
+        <th>제목</th>
+        <td>{{article.title}}</td>
+    </tr>
+    <tr>
+        <th>내용</th>
+        <td>{{article.content}}</td>
+    </tr>
+</table>
+<a href="/articles/{{article.id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/articles/{{article.id}}/delete" class="btn btn-danger">Delete</a>
+
+<a href="/articles">Go to Article List</a>
+<br>
+
+</body>
+</html>
